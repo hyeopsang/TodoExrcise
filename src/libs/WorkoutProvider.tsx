@@ -27,33 +27,35 @@ function WorkoutProvider({ children }: WorkoutProviderProps) {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [target, setTarget] = useState<string>("");
-    const apiKey = "4p/3T6QQfiSq7zj1Zc9YSw==R7P3PMoxSlxY3Njf";
+    const apiKey = process.env.REACT_APP_NINJA_API_KEY;
 
     useEffect(() => {
-        if (target) {
+        if (target && apiKey) { 
             setIsLoading(true);
-            fetch(`https://api.api-ninjas.com/v1/exercises?muscle=${target}`, {
-              method: 'GET',
-              headers: { 
+            const headers: HeadersInit = {
                 'X-Api-Key': apiKey,
                 'Content-Type': 'application/json'
-              }
+            };
+    
+            fetch(`https://api.api-ninjas.com/v1/exercises?muscle=${target}`, {
+                method: 'GET',
+                headers: headers
             })
             .then(response => {
-              if (!response.ok) {
-                throw new Error('Network response was not ok');
-              }
-              return response.json();
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
             })
             .then(data => {
-              setWorkOut(data);
-              setIsLoading(false);
-              console.log(data)
+                setWorkOut(data);
+                setIsLoading(false);
+                console.log(data)
             })
             .catch(error => {
-              console.error('Error:', error);
-              setError(error.message);
-              setIsLoading(false);
+                console.error('Error:', error);
+                setError(error.message);
+                setIsLoading(false);
             });
         }
     }, [target, apiKey]);
