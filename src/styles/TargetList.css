@@ -1,0 +1,74 @@
+
+.TargetList {
+    width: fit-content;
+    overflow: visible;
+    position: relative;
+    margin: 0 auto;
+}
+.TargetList div{
+    overflow: hidden;
+}
+.TargetList:hover ul {
+    transition: 0.5s;
+    height: 600px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.TargetList h2 {
+    width: 130px;
+    background-color: transparent;
+    padding: 14px;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    cursor: default;
+    color: #f1f1f1;
+    text-align: center;
+    font-size: 16px;
+}
+
+.TargetList ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    height: 0;
+    overflow: hidden;
+
+    text-wrap: nowrap;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: start;
+    color: #222;
+}
+.TargetList ul::-webkit-scrollbar{
+    width: 5px;
+    background-color: #fff;
+}
+.TargetList ul::-webkit-scrollbar-thumb{
+    width: 3px;
+    background-color: #fff;
+    height: 10px;
+    border-radius: 3px;
+}
+.TargetList ul::-webkit-scrollbar-track{
+    width: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.TargetList li {
+    width: 130px;
+    background-color: #fff;
+    padding: 14px;
+    cursor: pointer;
+}
+
+.TargetList li:hover {
+    background-color: #f8f8f8;
+}

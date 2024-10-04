@@ -1,0 +1,36 @@
+{
+    "exercises": {
+      "categories": {
+        "cardio": "유산소",
+        "olympic_weightlifting": "올림픽 역도",
+        "plyometrics": "플라이오메트릭",
+        "powerlifting": "파워리프팅",
+        "strength": "근력",
+        "stretching": "스트레칭",
+        "strongman": "스트롱맨"
+      },
+      "muscles": {
+        "abdominals": "복근",
+        "abductors": "외전근",
+        "adductors": "내전근",
+        "biceps": "이두근",
+        "calves": "종아리",
+        "chest": "가슴",
+        "forearms": "전완근",
+        "glutes": "둔근",
+        "hamstrings": "햄스트링",
+        "lats": "광배근",
+        "lower_back": "하부 등",
+        "middle_back": "중부 등",
+        "neck": "목",
+        "quadriceps": "대퇴사두근",
+        "traps": "승모근",
+        "triceps": "삼두근"
+      },
+      "levels": {
+        "beginner": "초보자",
+        "intermediate": "중급자",
+        "expert": "전문가"
+      }
+    }
+  }

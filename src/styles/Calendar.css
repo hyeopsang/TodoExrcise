@@ -1,0 +1,204 @@
+.Calendar {
+    width: 44%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+
+    color: #fff;
+}
+
+.CalendarIn {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 1px 3px 7px 4px rgba(123, 123, 123, 0.1);    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+.CalendarHeader {
+    display: flex;
+    margin: 0 auto;
+}
+
+.CalendarHeader > button {
+    border: none;
+    background-color: transparent;
+    margin: 0 30px;
+    cursor: pointer;
+
+    font-size: 30px;
+    color: #fff;
+}
+
+.Year {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.Year span {
+    cursor: default;
+
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.Year .changeYear {
+    cursor: pointer;
+    
+    font-weight: 800;
+    font-size: 48px;
+}
+
+.selectBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.selectBox button {
+    cursor: pointer;
+    background-color: #b1c9ef;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin: 0 auto;
+    box-shadow: 1px 3px 7px 4px rgba(123, 123, 123, 0.1);    
+
+    font-size: 24px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.selectBox button p {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 25px;
+}
+
+.selectYear {
+    margin-top: 10px;
+    width: fit-content;
+    height: 420px;
+    overflow-y: scroll;
+    background-color: #b1c9ef;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 1px 3px 7px 4px rgba(123, 123, 123, 0.1);    
+}
+
+.selectYear::-webkit-scrollbar {
+    display: none;
+}
+
+.selectYear ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.selectYear li {
+    width: 140px;
+    height: 120px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.selectYear li:hover,
+.selectYear .active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.DayContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-bottom: 2px solid #fff;
+}
+
+.DayContainer div {
+    height: 30px;
+    text-align: center;
+    border-right: 2px solid #fff;
+    border-top: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.DayContainer div:last-child {
+    border-right: none;
+}
+
+.DayContainer div.weekend,
+.DateContainer .CurrentMonth.weekend {
+    color: rgb(255, 243, 135);
+}
+
+.DateContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.DateContainer > div {
+    height: 60px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    text-align: left;
+}
+
+.DateContainer > div:nth-child(7n) {
+    border-right: none;
+}
+
+.DateContainer .Day {
+    padding-left: 5px;
+}
+
+.DateContainer .Today {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 18px;
+    color: #fff;
+}
+
+.DateContainer .DiffMonth {
+    background-color: rgba(255, 255, 255, 0.3);
+
+    color: #99ccff;
+}
+
+.DateContainer .CurrentMonth {
+    color: #fff;
+}
+
+.Today {
+    color: lightblue;
+    margin: 0 auto;
+    cursor: default;
+}

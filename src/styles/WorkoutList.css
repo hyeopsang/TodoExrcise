@@ -1,0 +1,71 @@
+.WorkoutList{
+    width: 28%;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    overflow: hidden;
+}
+.WorkoutList > h2{
+    font-size: 24px;
+    color: #fff;
+    font-weight: 500;
+    padding: 0 10px;
+}
+.WorkoutList .List{
+    list-style: none;
+    padding: 0;
+    overflow-y: scroll;
+    height: 600px;
+}
+.List > p{
+    padding-left: 20px;
+    font-size: 18px;
+    color: #fff;
+}
+.WorkoutList .List::-webkit-scrollbar{
+    width: 5px;
+    background-color: transparent;
+}
+.WorkoutList .List::-webkit-scrollbar-thumb{
+    width: 3px;
+    background-color: #fff;
+    height: 10px;
+    border-radius: 3px;
+}
+.WorkoutList .List::-webkit-scrollbar-track{
+    width: 5px;
+    background-color: transparent;
+}
+.Workout{
+    cursor: default;
+    padding: 15px 10px;
+    font-size: 18px;
+
+    color: #f2f2f2;
+}
+.Workout:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.Workout > div{
+    display: flex;
+}
+.Workout h2{
+    font-size: 20px;
+    line-height: 0;
+}
+.Workout button{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    margin-left: 10px;
+}
+.Workout summary{
+    cursor: default;
+    list-style: none;
+    color: #fff;
+    padding-top: 5px;
+}
+
+
